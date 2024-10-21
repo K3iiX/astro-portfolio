@@ -1,0 +1,18 @@
+---
+import { socials } from "../assets/data";
+---
+
+<nav class="w-full h-16 bg-black text-white flex items-center px-4 py-3 top-0 z-50 justify-between">
+    <ul class="grid justify-items-center basis-[20%]"
+    style={{gridTemplateColumns: `repeat(${socials.length}, minmax(0, 1fr))`}}>
+    {
+        socials.map(social=> (
+            <li>
+                <a href="#" class="text-2xl opacity-50 hover:opacity-100 duration-300 ease-in cursor-pointer">
+                    <i class={social.logo}></i>
+                </a>
+            </li>
+        ))
+    }
+    </ul>
+</nav>
