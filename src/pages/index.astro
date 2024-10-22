@@ -3,13 +3,15 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/navbar.astro';
 import Separator from '../components/separator.astro';
 import ProfilePicture from '../components/profilePicture.astro'
+import About from '../components/about.astro'
 ---
 
 <Layout title='K3iX | Portfolio'>
 	<Navbar />
 
-	<main class="mt-16 scroll-mt-36">
+	<main id="home" class="mt-16 scroll-mt-36">
 		<ProfilePicture />
 		<Separator />
+		<About />
 	</main>
 </Layout>
