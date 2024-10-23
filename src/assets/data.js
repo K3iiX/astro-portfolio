@@ -69,3 +69,54 @@ export const technologies = [
         logo: 'bx bxl-sass',
     },
 ];
+
+export const projects = [
+    {
+        title: 'RORRO',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam repellat minus molestiae ducimus doloribus possimus!',
+        image: 'rorro',
+        color: '#121234',
+    },
+    {
+        title: 'YelCamp',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam repellat minus molestiae ducimus doloribus possimus!',
+        image: 'yelcamp',
+        color: '#121234',
+    },
+    {
+        title: 'ColorBlind Pixel',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam repellat minus molestiae ducimus doloribus possimus!',
+        image: 'colorblind',
+        color: '#121234',
+    },
+    {
+        title: 'Food App',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam repellat minus molestiae ducimus doloribus possimus!',
+        image: 'foodApp',
+        color: '#121234',
+    },
+    {
+        title: 'Games Web',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam repellat minus molestiae ducimus doloribus possimus!',
+        image: 'simpleGames',
+        color: '#121234',
+    },
+    {
+        title: 'Weather App',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam repellat minus molestiae ducimus doloribus possimus!',
+        image: 'weatherApp',
+        color: '#121234',
+    },
+    {
+        title: 'Spotify Clone',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam repellat minus molestiae ducimus doloribus possimus!',
+        image: 'spotifyClone',
+        color: '#121234',
+    },
+    {
+        title: 'Expense Tracker',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam repellat minus molestiae ducimus doloribus possimus!',
+        image: 'expenseTracker',
+        color: '#121234',
+    }
+]
