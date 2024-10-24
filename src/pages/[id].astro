@@ -1,7 +1,7 @@
 ---
 const { id } = Astro.params;
 import Layout from "../layouts/Layout.astro";
-import { projects } from "../assets/data";
+import { projects, buttons } from "../assets/data";
 
 export function getStaticPaths () {
     return [
@@ -22,7 +22,11 @@ const card = projects.find((card) => card.image == id);
 <Layout title={`Project | ${id}`} >
 
     <!---------- BACKGROUND ---------->
-    <div class="relative flex items-center lg:h-screen xs:h-fit">
+    <div 
+        class="relative flex items-center lg:h-screen xs:h-fit"
+        transition:name={`image-${id}`}
+        transition:persist=""
+    >
         <div 
             class="absolute min-h-screen inset-0 z-[-1] bg-gradient-to-b from-context"
             style=`--context-color: ${card.color}`
@@ -44,9 +48,34 @@ const card = projects.find((card) => card.image == id);
                 <img
                     src={`${id}.jpg`}
                     alt="#"
-                    class="aspect-video object-cover object-top mx-auto lg:mb-0
-                    lg:mt-0 sm:w-[450px] xxs:mt-10 xs:w-[80%] xs:mb-5 xs:mt-20"
+                    class="cursor-pointer hover:scale-110 duration-300 ease-in aspect-video object-cover object-top mx-auto lg:mb-0
+                    lg:mt-0 sm:w-[450px] xxs:mt-10 xs:mb-5 xs:mt-20"
                 >
+
+                <div class="flex flex-col gap-y-3 relative lg:py-0 xs:py-7">
+                    <h1 class="text-[75px] leading-[70px] font-black">{card.title}</h1>
+                    <p class="text-white/70 sm:text-[14px] xs:text-[12px]">{card.description}</p>
+
+                    <!---------- BUTTONS  ---------->
+                    <div class="absolute flex gap-x-5 lg:bottom-4 lg:top-80 lg:right-0 xxs:right-16 xxs:flex-row xxs:-bottom-4 xs:flex-col xs:-bottom-16 xs:right-[calc(100vw-60%)]">
+                        <a
+                           href={`/#${id}`}
+                           class="text-2xl opacity-60 hover:opacity-100 duration-300 ease-in"
+                           ><i class={`${buttons[0].back} lg:text-[17px] xs:text-[14px]`}> Back </i></a
+                        >
+                        <a
+                           target="_blank"
+                           href={buttons[0].hrefgithub}
+                           class="text-2xl opacity-60 hover:opacity-100 duration-300 ease-in"
+                           ><i class={`${buttons[0].github} lg:text-[17px] xs:text-[14px]`}> Repository </i></a
+                        >
+                        <a
+                           href="#"
+                           class="text-2xl opacity-60 hover:opacity-100 duration-300 ease-in"
+                           ><i class={`${buttons[0].demo} lg:text-[17px] xs:text-[14px]`}> Live Demo </i></a
+                        >
+                    </div>
+                </div>
             </div>
         </div>
     </div>
